@@ -1,0 +1,98 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter --quiet assemble --no-version-check --depfile D:\flutter firebase projects\firetap\build\app\intermediates\flutter\debug/flutter_build.d --output D:\flutter firebase projects\firetap\build\app\intermediates\flutter\debug -dTargetFile=D:\flutter firebase projects\firetap\lib\main.dart -dTargetPlatform=android -dBuildMode=debug -dTrackWidgetCreation=true --DartDefines=RkxVVFRFUl9XRUJfQVVUT19ERVRFQ1Q9dHJ1ZQ== debug_android_application
+
+## exception
+
+UnsupportedError: Unsupported operation: Illegal character in path: gradle\wrapper
+
+```
+#0      _Uri._checkWindowsPathReservedCharacters (dart:core/uri.dart:1860:11)
+#1      _Uri._toWindowsFilePath (dart:core/uri.dart:2890:7)
+#2      _Uri.toFilePath (dart:core/uri.dart:2862:38)
+#3      ManifestAssetBundle._parseAssetsFromFolder (package:flutter_tools/src/asset.dart:744:29)
+#4      ManifestAssetBundle._parseAssets (package:flutter_tools/src/asset.dart:685:9)
+#5      ManifestAssetBundle.build (package:flutter_tools/src/asset.dart:245:54)
+<asynchronous suspension>
+#6      copyAssets (package:flutter_tools/src/build_system/targets/assets.dart:50:26)
+<asynchronous suspension>
+#7      AndroidAssetBundle.build (package:flutter_tools/src/build_system/targets/android.dart:64:34)
+<asynchronous suspension>
+#8      _BuildInstance._invokeInternal (package:flutter_tools/src/build_system/build_system.dart:839:9)
+<asynchronous suspension>
+#9      FlutterBuildSystem.build (package:flutter_tools/src/build_system/build_system.dart:606:16)
+<asynchronous suspension>
+#10     AssembleCommand.runCommand (package:flutter_tools/src/commands/assemble.dart:317:32)
+<asynchronous suspension>
+#11     FlutterCommand.run.<anonymous closure> (package:flutter_tools/src/runner/flutter_command.dart:1161:27)
+<asynchronous suspension>
+#12     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:150:19)
+<asynchronous suspension>
+#13     CommandRunner.runCommand (package:args/command_runner.dart:209:13)
+<asynchronous suspension>
+#14     FlutterCommandRunner.runCommand.<anonymous closure> (package:flutter_tools/src/runner/flutter_command_runner.dart:281:9)
+<asynchronous suspension>
+#15     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:150:19)
+<asynchronous suspension>
+#16     FlutterCommandRunner.runCommand (package:flutter_tools/src/runner/flutter_command_runner.dart:229:5)
+<asynchronous suspension>
+#17     run.<anonymous closure>.<anonymous closure> (package:flutter_tools/runner.dart:62:9)
+<asynchronous suspension>
+#18     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:150:19)
+<asynchronous suspension>
+#19     main (package:flutter_tools/executable.dart:94:3)
+<asynchronous suspension>
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel stable, 2.10.5, on Microsoft Windows [Version 10.0.22000.675], locale en-IN)
+    • Flutter version 2.10.5 at C:\development\sdk\flutter
+    • Upstream repository https://github.com/flutter/flutter.git
+    • Framework revision 5464c5bac7 (4 weeks ago), 2022-04-18 09:55:37 -0700
+    • Engine revision 57d3bac3dd
+    • Dart version 2.16.2
+    • DevTools version 2.9.2
+
+[✓] Android toolchain - develop for Android devices (Android SDK version 30.0.3)
+    • Android SDK at C:\Users\Dil Haque\AppData\Local\Android\sdk
+    • Platform android-31, build-tools 30.0.3
+    • Java binary at: C:\Program Files\Android\Android Studio\jre\bin\java
+    • Java version OpenJDK Runtime Environment (build 11.0.10+0-b96-7249189)
+    • All Android licenses accepted.
+
+[✓] Chrome - develop for the web
+    • Chrome at C:\Program Files\Google\Chrome\Application\chrome.exe
+
+[✗] Visual Studio - develop for Windows
+    ✗ Visual Studio not installed; this is necessary for Windows development.
+      Download at https://visualstudio.microsoft.com/downloads/.
+      Please install the "Desktop development with C++" workload, including all of its default components
+
+[✓] Android Studio (version 2020.3)
+    • Android Studio at C:\Program Files\Android\Android Studio
+    • Flutter plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/9212-flutter
+    • Dart plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/6351-dart
+    • Java version OpenJDK Runtime Environment (build 11.0.10+0-b96-7249189)
+
+[✓] VS Code (version 1.67.1)
+    • VS Code at C:\Users\Dil Haque\AppData\Local\Programs\Microsoft VS Code
+    • Flutter extension version 3.40.0
+
+[✓] Connected device (4 available)
+    • Android SDK built for x86 (mobile) • emulator-5554 • android-x86    • Android 8.1.0 (API 27) (emulator)
+    • Windows (desktop)                  • windows       • windows-x64    • Microsoft Windows [Version 10.0.22000.675]
+    • Chrome (web)                       • chrome        • web-javascript • Google Chrome 100.0.4896.127
+    • Edge (web)                         • edge          • web-javascript • Microsoft Edge 101.0.1210.39
+
+[✓] HTTP Host Availability
+    • All required HTTP hosts are available
+
+! Doctor found issues in 1 category.
+```
